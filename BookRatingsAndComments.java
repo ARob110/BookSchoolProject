@@ -1,8 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class main {
+public class BookRatingsAndComments {
     public static void main(String[] args) {
         menu();
     }
@@ -12,13 +10,37 @@ public class main {
         System.out.println("1. Leave a rating.");
         System.out.println("2. Leave a comment.");
         System.out.println("3. Display ratings.");
+        System.out.println("4. Display comments.");
+        System.out.println("0. Quit.");
         int menuchoice = scan.nextInt();
 
-        if (menuchoice == 1) {
-            ratings();
+        switch(menuchoice) {
+            case 1:
+                ratings();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                System.out.println();
+                break;
+            case 0:
+                System.out.print("Goodbye.");
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Please enter a valid choice.");
+                menu();
+                break;
         }
-        else if (menuchoice == 3) {
-        }
+    }
+
+    public static void comments() {
+        Scanner comment = new Scanner(System.in);
+        System.out.print("Please leave a comment below: ");
+        String usercomment = comment.next();
+        menu();
     }
 
     public static void ratings() {
