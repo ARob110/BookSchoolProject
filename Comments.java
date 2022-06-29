@@ -6,7 +6,7 @@ import java.util.List;
 public class Comments {
     private List<Comment> commentList;
 
-    // Method to return the list of employees
+    // Method to return the list of comments
     public List<Comment> getCommentList()
     {
         if (commentList == null) {

@@ -41,7 +41,7 @@ public class CommentsDAO {
     }
 
 
-    // Method to add an employee to the employees list
+    // Method to add an comment to the comments list
     public void
     addComment(Comment comment)
     {

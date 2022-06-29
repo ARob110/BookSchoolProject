@@ -4,15 +4,16 @@ import java.util.Arrays;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 // Creating Comment Entity
-
 public class Comment {
 	public static void main(String[] args) {
-
+		Comment c1 = new Comment(2, "Tom", "Henderson", "I love everything!");
+		System.out.print(c1);
 	}
 	public Comment() {}
 
@@ -31,15 +32,14 @@ public class Comment {
 	private String lastName;
 	private String comment;
 
-	// Overriding the toString method
-	// to find all the values
+	// Overriding the toString method to find all the values
 	@Override
 	public String toString()
 	{
 		return "Comment [id="
 				+ id + ", firstName="
 				+ firstName + ", lastName="
-				+ lastName + ", email="
+				+ lastName + ", comment="
 				+ comment + "]";
 	}
 

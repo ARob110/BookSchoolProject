@@ -49,7 +49,8 @@ public class CommentController {
         commentsDao.addComment(comment);
 
         URI location
-                = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(comment.getId()).toUri();
+                = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
+                .buildAndExpand(comment.getId()).toUri();
 
         return ResponseEntity.created(location).build();
     }
